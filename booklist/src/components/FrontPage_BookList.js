@@ -10,7 +10,7 @@ function BookList() {
   
     useEffect(() => {
       axios
-        .get('https://finalreact-e77p.onrender.com/')
+        .get('https://final-server-za41.onrender.com')
         .then((res) => {
           setBooks(res.data);
         })
@@ -20,7 +20,7 @@ function BookList() {
     }, []);
     
     const deleteBook = (id) =>{
-      axios.delete('https://finalreact-e77p.onrender.com/' + id)
+      axios.delete('https://final-server-za41.onrender.com' + id)
           .then(response => console.log(response.data));
       setBooks(books.filter(el => el._id !== id))
     }
